@@ -1,6 +1,8 @@
-import task.Task1
+import task.Task5
 
 fun main() {
-    val t1 = Task1()
-    t1.run()
+    val t = Task5()
+    val input = "shortarrayof_00"
+    val res = t.run(input)
+    println("Task 5 result: $res")
 }
