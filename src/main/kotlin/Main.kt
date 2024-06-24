@@ -1,8 +1,8 @@
-import task.Task5
+import task.Task10
 
 fun main() {
-    val t = Task5()
-    val input = "shortarrayof_00"
+    val t = Task10()
+    val input = 35231
     val res = t.run(input)
-    println("Task 5 result: $res")
+    println("Task 10 result: ${res.contentToString()}")
 }
