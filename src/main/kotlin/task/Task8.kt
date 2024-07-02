@@ -6,19 +6,21 @@ package task
  */
 class Task8 {
 
-    fun max_rot(input: Int): Int {
-        val numbers: MutableList<Int> = mutableListOf()
-        numbers.add(input)
-        numbers.add(input.toString().shiftLeft().toInt())
+    fun max_rot(input: Long): Long {
+        val numbers: MutableList<String> = mutableListOf()
+        numbers.add(input.toString())
+        numbers.add(input.toString().shiftLeft())
 
         for (i in 1..<input.toString().length) {
-            val baseStr = numbers.last().toString()
+            val baseStr = numbers.last()
             val startStr = baseStr.substring(0, i)
             val endStr = baseStr.substring(i, baseStr.length).shiftLeft()
-            numbers.add((startStr + endStr).toInt())
+            numbers.add("$startStr$endStr")
         }
 
-        return numbers.max()
+        return numbers
+            .map { it.toLong() }
+            .max()
     }
 }
 

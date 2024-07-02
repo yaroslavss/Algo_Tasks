@@ -11,6 +11,6 @@ class Task7 {
         val matchResult = regex.find(input)!!
         val (value1, value2, result) = matchResult.destructured
 
-        return value1.reversed().toInt() + value2.reversed().toInt() == result.reversed().toInt()
+        return value1.reversed().toLong() + value2.reversed().toLong() == result.reversed().toLong()
     }
 }

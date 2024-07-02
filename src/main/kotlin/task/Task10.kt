@@ -6,9 +6,9 @@ package task
  */
 class Task10 {
 
-    fun run(input: Int): Array<Int> {
+    fun run(input: Long): IntArray {
         val inputStr = input.toString()
-        val result = Array(inputStr.length) { 0 }
+        val result = IntArray(inputStr.length)
         var n = 0
 
         for (char in input.toString().reversed()) {
